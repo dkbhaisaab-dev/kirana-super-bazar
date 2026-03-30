@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 1rem;
+    /* Off-white background #F7F7F3 */
+    --background: 0.97 0.005 90;
+    --foreground: 0.2 0.03 145;
+    /* White cards */
+    --card: 1 0 0;
+    --card-foreground: 0.2 0.03 145;
+    --popover: 1 0 0;
+    --popover-foreground: 0.2 0.03 145;
+    /* Primary: green #1FA64A */
+    --primary: 0.58 0.18 145;
+    --primary-foreground: 1 0 0;
+    /* Secondary: teal #49D1C6 */
+    --secondary: 0.78 0.1 186;
+    --secondary-foreground: 0.15 0.05 192;
+    /* Muted */
+    --muted: 0.93 0.01 90;
+    --muted-foreground: 0.55 0.02 90;
+    /* Accent: orange #E57A12 */
+    --accent: 0.65 0.18 54;
+    --accent-foreground: 1 0 0;
+    /* Destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+    --border: 0.9 0.01 90;
+    --input: 0.9 0.01 90;
+    --ring: 0.58 0.18 145;
+    /* Charts */
+    --chart-1: 0.58 0.18 145;
+    --chart-2: 0.65 0.18 54;
+    --chart-3: 0.78 0.1 186;
+    --chart-4: 0.54 0.12 240;
+    --chart-5: 0.53 0.1 192;
+    /* Sidebar */
+    --sidebar: 1 0 0;
+    --sidebar-foreground: 0.2 0.03 145;
+    --sidebar-primary: 0.58 0.18 145;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.93 0.01 90;
+    --sidebar-accent-foreground: 0.2 0.03 145;
+    --sidebar-border: 0.9 0.01 90;
+    --sidebar-ring: 0.58 0.18 145;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(135deg, #49d1c6 0%, #6ecda0 50%, #8edb68 100%);
+  }
+  .card-green {
+    background-color: #1fa64a;
+  }
+  .card-orange {
+    background-color: #e57a12;
+  }
+  .card-blue {
+    background-color: #1f7db7;
+  }
+  .card-teal {
+    background-color: #158e8b;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
